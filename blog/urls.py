@@ -1,5 +1,5 @@
-from . import views
 from django.urls import path
+from . import views
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
@@ -9,4 +9,3 @@ urlpatterns = [
     path('<slug:slug>/delete_comment/<int:comment_id>',
          views.comment_delete, name='comment_delete'),
 ]
-

@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import About
 from django_summernote.admin import SummernoteModelAdmin
+from .models import About
 from .models import CollaborateRequest
 
 
@@ -15,6 +15,7 @@ class AboutAdmin(SummernoteModelAdmin):
 #       If you want to customise the admin panel view in your
 #       own projects, then inherit from admin.ModelAdmin like
 #       we do below.
+
 
 @admin.register(CollaborateRequest)
 class CollaborateRequestAdmin(admin.ModelAdmin):
