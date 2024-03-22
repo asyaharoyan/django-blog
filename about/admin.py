@@ -4,9 +4,11 @@ from .models import About
 from .models import CollaborateRequest
 
 
-# Register your models here.
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
+    """
+    Adds text editing of content admin
+    """
     summernote_fields = ('content',)
 
 # Note: admin.ModelAdmin is the standard way of registering
@@ -19,5 +21,7 @@ class AboutAdmin(SummernoteModelAdmin):
 
 @admin.register(CollaborateRequest)
 class CollaborateRequestAdmin(admin.ModelAdmin):
-
+    """
+    Lists message and read  fileds for display in admin
+    """
     list_display = ('message', 'read',)
